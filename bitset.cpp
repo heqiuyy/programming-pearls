@@ -18,16 +18,26 @@ void clr(int i )
 }
 int test(int i )
 {
+    if( a[i>>SHIFT] ==(1<<(i &MASK)))
+     return 1;
+     else
+     return 0;
 }
 
 int main(){
     int i = 35;
     cout<<sizeof(a)<<endl;
     cout<<sizeof(a)/sizeof(*a)<<endl;
-    //设置i，也就是置相应位置位1
     set(i);
-    //测试是否置1了
     if(test(i))
         cout<<"ok"<<endl;
+    if(test(55))
+        cout<<"ok"<<endl;
+    else
+          cout<<"no ok"<<endl;
     return 0;
 }
+
+
+
+
